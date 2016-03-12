@@ -1,4 +1,16 @@
 # owncloud
+
+### Mysql
+```
+docker run -d --name mysql \ 
+  -v /srv/docker/owncloud/mysql:/var/lib/mysql \ 
+  -e MYSQL_ROOT_PASSWORD=test \
+  -e MYSQL_DATABASE=owncloud \ 
+  -e MYSQL_USER=owncloud \ 
+  -e MYSQL_PASSWORD=owncloud \ 
+  mysql:5
+```
+
 ### Build
 ```
 docker build -t owncloud-https .
